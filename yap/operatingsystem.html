@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 11</title>
+   
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .window {
+      background-color: #ffffff;
+      border: 2px solid #0078d7;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    #taskbar {
+      background-color: #0078d7;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      align-items: center;
+    }
+
+    #start-button {
+      background-color: #ffffff;
+      color: #0078d7;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #start-menu {
+      background-color: #ffffff;
+      border: 1px solid #1e1e1e;
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      width: 200px;
+      display: none;
+    }
+
+    .start-menu-item {
+      padding: 5px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .start-menu-item:hover {
+      background-color: #e1e1e1;
+    }
+
+    .start-menu-icon {
+      fill: #0078d7;
+      margin-right: 5px;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 40px);
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="window">
+    <iframe id="iframe-container" src="" frameborder="0"></iframe>
+  </div>
+
+  <div id="taskbar">
+    <button id="start-button">Launch</button>
+    <div id="start-menu">
+
+      <!-- Icons for Minecraft, Browser, and YouTube -->
+      <div class="start-menu-item" data-url="/eaglercraftbasic.html">
+        <svg class="start-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-2 3h4v1h-4V9zm0 2h4v1h-4v-1zm0 2h4v1h-4v-1zm6-4h2v1h-2V9zm0 2h2v1h-2v-1zm0 2h2v1h-2v-1zm-4 4h2v1h-2v-1zm0-2h2v1h-2v-1z" />
+        </svg>
+        Minecraft
+      </div>
+      <div class="start-menu-item" data-url="https://velocity.radon.games/">
+        <svg class="start-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M17.66 3.41a1 1 0 0 0-1.41 0L6.7 12.29a1 1 0 0 0-.29.71V19a1 1 0 0 0 1 1h11.5a1 1 0 0 0 .71-.29l9.88-9.88a1 1 0 0 0 0-1.41z" />
+          <path
+            d="M21 6.42V8a1 1 0 0 1-1 1h-2.58l-2.25 2.25H12.5a1 1 0 0 1-1-1V9.42l-2.08 2.08a1 1 0 0 1-1.41 0l-7-7A1 1 0 0 1 1.29 3H3a1 1 0 0 1 1 1v12.17l2.37-2.37a1 1 0 0 1 1.41 0l1.42 1.42L9.12 17a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l2.5-2.5H16a1 1 0 0 1 1 1v1.5l5.3-5.29z" />
+        </svg>
+        Browser
+      </div>
+      <div class="start-menu-item" data-url="https://www.youtube.com/embed/watch?v=ga3ttnz3nXI">
+        <svg class="start-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M21.57 7.35c-.21-.8-.82-1.43-1.61-1.61C18.27 5 12 5 12 5s-6.27 0-7.96.73c-.79.18-1.4.81-1.61 1.61C2 9.04 2 12 2 12s0 2.96.43 4.65c.21.8.82 1.43 1.61 1.61C5.73 19 12 19 12 19s6.27 0 7.96-.73c.79-.18 1.4-.81 1.61-1.61C22 14.96 22 12 22 12s0-2.96-.43-4.65zM10 15.5V8.5l6.5 3-6.5 3z" />
+        </svg>
+        YouTube
+      </div>
+    </div>
+    <div class="taskbar-icons">
+      <svg class="taskbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M10 4H8v16h12V6h-2v12h-8V4zm6 12h-4v-2h4v2zm0-4h-4V8h4v4z" />
+      </svg>
+      <svg class="taskbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 20c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12H8v-2h4v2zm4 0h-2v-2h2v2zm0-4h-2V8h2v2z" />
+      </svg>
+      <!-- Minecraft Icon -->
+      <svg class="taskbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-2 3h4v1h-4V9zm0 2h4v1h-4v-1zm0 2h4v1h-4v-1zm6-4h2v1h-2V9zm0 2h2v1h-2v-1zm0 2h2v1h-2v-1zm-4 4h2v1h-2v-1zm0-2h2v1h-2v-1z" />
+      </svg>
+      <!-- Browser Icon -->
+      <svg class="taskbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M17.66 3.41a1 1 0 0 0-1.41 0L6.7 12.29a1 1 0 0 0-.29.71V19a1 1 0 0 0 1 1h11.5a1 1 0 0 0 .71-.29l9.88-9.88a1 1 0 0 0 0-1.41z" />
+        <path
+          d="M21 6.42V8a1 1 0 0 1-1 1h-2.58l-2.25 2.25H12.5a1 1 0 0 1-1-1V9.42l-2.08 2.08a1 1 0 0 1-1.41 0l-7-7A1 1 0 0 1 1.29 3H3a1 1 0 0 1 1 1v12.17l2.37-2.37a1 1 0 0 1 1.41 0l1.42 1.42L9.12 17a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l2.5-2.5H16a1 1 0 0 1 1 1v1.5l5.3-5.29z" />
+      </svg>
+      <!-- YouTube Icon -->
+      <svg class="taskbar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M21.57 7.35c-.21-.8-.82-1.43-1.61-1.61C18.27 5 12 5 12 5s-6.27 0-7.96.73c-.79.18-1.4.81-1.61 1.61C2 9.04 2 12 2 12s0 2.96.43 4.65c.21.8.82 1.43 1.61 1.61C5.73 19 12 19 12 19s6.27 0 7.96-.73c.79-.18 1.4-.81 1.61-1.61C22 14.96 22 12 22 12s0-2.96-.43-4.65zM10 15.5V8.5l6.5 3-6.5 3z" />
+      </svg>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("start-button").addEventListener("click", function () {
+      var startMenu = document.getElementById("start-menu");
+      if (startMenu.style.display === "block") {
+        startMenu.style.display = "none";
+      } else {
+        startMenu.style.display = "block";
+      }
+    });
+
+    var taskbarItems = document.querySelectorAll(".taskbar-item");
+    taskbarItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        var url = this.getAttribute("data-url");
+        document.getElementById("iframe-container").src = url;
+      });
+    });
+
+    var startMenuItems = document.querySelectorAll(".start-menu-item");
+    startMenuItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        var url = this.getAttribute("data-url");
+        document.getElementById("iframe-container").src = url;
+        document.getElementById("start-menu").style.display = "none";
+      });
+    });
+
+    var taskbarIcons = document.querySelectorAll(".taskbar-icon");
+    taskbarIcons.forEach(function (icon) {
+      icon.addEventListener("click", function () {
+        // Handle click on taskbar icon
+      });
+    });
+  </script>
+</body>
+
+</html>

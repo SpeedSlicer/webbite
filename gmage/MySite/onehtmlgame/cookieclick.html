@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cookie Clicker</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    #cookie-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #cookie {
+      width: 200px;
+      height: 200px;
+      background-image: url('cookie.png');
+      background-size: cover;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    #cookie:hover {
+      transform: scale(1.1);
+    }
+
+    #score {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    #upgrade-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cookie-container">
+    <h1>Cookie Clicker</h1>
+    <p>Click the cookie to get cookies!</p>
+
+    <div id="cookie"><img src="cookie.png" alt="Cookie">
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p id="score">Cookies: 0</p>
+
+    <div id="upgrade-container">
+      <button id="buyAutoClicker" class="button">Buy Auto-Clicker</button>
+    </div>
+  </div>
+
+  <script>
+    let cookies = 0;
+
+    // Function to update the cookie count
+    function updateCookies() {
+      document.getElementById("score").innerText = `Cookies: ${cookies}`;
+    }
+
+    // Clicking the cookie
+    document.getElementById("cookie").addEventListener("click", () => {
+      cookies++;
+      updateCookies();
+    });
+
+    // Auto-clicking upgrade
+    let autoClickers = 0;
+    let autoClickerInterval;
+
+    function startAutoClicker() {
+      autoClickerInterval = setInterval(() => {
+        cookies += autoClickers;
+        updateCookies();
+      }, 1000);
+    }
+
+    document.getElementById("buyAutoClicker").addEventListener("click", () => {
+      const autoClickerCost = Math.pow(10, autoClickers);
+      if (cookies >= autoClickerCost) {
+        cookies -= autoClickerCost;
+        autoClickers++;
+        startAutoClicker();
+        updateCookies();
+      } else {
+        alert("Not enough cookies to buy an auto-clicker!");
+      }
+    });
+  </script>
+</body>
+
+</html>

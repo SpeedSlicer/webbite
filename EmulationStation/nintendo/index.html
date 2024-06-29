@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nintendo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>  
+       body {
+  background: linear-gradient(-45deg, #330033, #000000);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: auto;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff99ff;
+        text-shadow: 2px 2px 4px #660099;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu-item {
+        flex: 1 1 200px; /* Flexible width with a maximum width of 200px */
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .menu-item:hover {
+        transform: scale(1.05); /* Enlarge image on hover */
+        filter: brightness(120%);
+    }
+
+    .btn {
+        background-color: #660099;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+        background-color: #ff99ff;
+    }
+</style>
+
+
+<body>
+
+<div class="container">
+    <h1 class="boujee-text">EmulationStation</h1>
+    <button onClick="location.href='../index.html'" class="btn"><i class="fa fa-home"></i> Home</button>
+
+    <div class="menu">
+        <div class="menu-item">
+            <a href="gb.html"><img src="resources/gb.png" alt="Web Retro"></a>
+            <p>GameBoy</p>
+        </div>
+        <div class="menu-item">
+            <a href="gbc.html"><img src="resources/gbc.png" alt="Eagler"></a>
+            <p>GameBoy Color</p>
+        </div>
+        <div class="menu-item">
+            <a href="gba.html"><img src="resources/gba.png" alt="MySite Games"></a>
+            <p>Gameboy Advance</p>
+        </div>
+        <div class="menu-item">
+            <a href="nes.html"><img src="resources/nes.png" alt="MySite Games"></a>
+            <p>NES</p>
+        </div>
+        <div class="menu-item">
+            <a href="snes.html"><img src="resources/snes.png" alt="MySite Games"></a>
+            <p>SNES</p>
+        </div>
+        <div class="menu-item">
+            <a href="n64.html"><img src="resources/n64.png" alt="MySite Games"></a>
+            <p>N64</p>
+        </div>
+        <div class="menu-item">
+            <a href="#"><img src="resources/wip.png" alt="MySite Games"></a>
+            <p>WIP</p>
+        </div>
+        <div class="menu-item">
+            <a href="#"><img src="resources/wip.png" alt="MySite Games"></a>
+            <p>WIP</p>
+        </div>
+         <div class="menu-item">
+            <a href="#"><img src="resources/wip.png" alt="MySite Games"></a>
+            <p>WIP</p>
+        </div>
+        <div class="menu-item">
+            <a href="#"><img src="resources/wip.png" alt="MySite Games"></a>
+            <p>WIP</p>
+        </div>
+           <div class="menu-item">
+            <a href="#"><img src="resources/wip.png" alt="MySite Games"></a>
+            <p>WIP</p>
+        </div>   <div class="menu-item">
+            <a href="#"><img src="resources/wip.png" alt="MySite Games"></a>
+            <p>WIP</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

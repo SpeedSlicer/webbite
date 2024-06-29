@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Speed Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    #logo {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      margin-top: 50px;
+      display: block;
+      user-select: none;
+    }
+
+    #content {
+      width: 200px;
+      border: 1px dashed #dc0000;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px;
+      user-select: none;
+    }
+
+    #clickarea {
+      width: 500px;
+      height: 300px;
+      border: 2px solid #dc0000;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 20px;
+      position: relative;
+    }
+
+    #start {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 0;
+      line-height: 2.5;
+      padding: 0 20px;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      border-radius: 10px;
+      background-color: rgba(220, 0, 0, 1);
+      background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+      box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+
+    #start:hover {
+      background-color: rgba(255, 0, 0, 1);
+    }
+
+    #start:active {
+      box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+
+    .button {
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Home button -->
+    <a href="../index.html" class="button">Home</a>
+    <img id="logo" src="resources/cpstest.png" />
+    <div id="content">
+      Timer: <span id="timer"></span><br/>
+      Score: <span id="score"></span><br/>
+      Clicks/s: <span id="clicks"></span>
+    </div>
+    <div id="clickarea">
+      <button id="start">Start</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("start").addEventListener("click", function() {
+      var score = 0;
+      var startTime = Date.now();
+
+      function updateScore() {
+        var elapsedTime = (Date.now() - startTime) / 1000;
+        var clicksPerSecond = score / elapsedTime;
+        document.getElementById("score").textContent = score;
+        document.getElementById("clicks").textContent = clicksPerSecond.toFixed(2);
+      }
+
+      document.getElementById("clickarea").addEventListener("click", function() {
+        score++;
+        updateScore();
+      });
+
+      document.getElementById("start").style.display = "none";
+      var duration = 10; // Duration of the test in seconds
+      var timer = setInterval(function() {
+        duration--;
+        document.getElementById("timer").textContent = duration;
+        if (duration <= 0) {
+          clearInterval(timer);
+          document.getElementById("clickarea").removeEventListener("click");
+          updateScore();
+          alert("Test finished! Your score: " + score + " clicks in " + (10 - duration) + " seconds.");
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

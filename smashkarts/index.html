@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breakjav Launcher</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-x4Yb3WtBRp3EwCweRb6jFLtsA/PEl+WaVr+ZRtN4eyNUSMVsGHgtQ8H9rDuyxFzNnwtBu2nd0YXarZsWeqZTJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  body {
+    font-family: 'Minecraft', Arial;
+    background-color: #0f0f0f;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  /* Style for dropdown menu */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #333;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fas fa-gamepad"></i> Breakjav Launcher <i class="fas fa-gamepad"></i></h1>
+    <p>Version 1.0.23</p>
+    <!-- Home button -->
+    <a href="../index.html" class="btn"><i class="fas fa-home"></i> Home</a>
+    <!-- Button to launch SmashKarts -->
+    <a class="btn" onclick="window.open('https://smashkarts.io/#monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge');"><i class="fas fa-play-circle"></i> Launch SmashKarts <i class="fas fa-play-circle"></i></a>
+    <!-- Dropdown menu for other games -->
+    <div class="dropdown">
+      <a class="btn"><i class="fas fa-gamepad"></i> Other Games <i class="fas fa-gamepad"></i></a>
+      <div class="dropdown-content">
+        <a href="../gmage/eaglerindex.html"><i class="fas fa-eagle"></i> Eagler</a>
+        <a href="../cookieclicker/index.html"><i class="fas fa-cookie-bite"></i> Cookie Clicker</a>
+        <!-- Add more game links as needed -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openAboutBlank() {
+      window.open('https://smashkarts.io/#monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge-monkey-ohio-cheese-monkey-challenge');
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webbite : Home</title>
+<link rel="stylesheet" href="oldstyle.css?v=8">
+
+</head>
+<body>
+<div class="clock" id="clock"></div>
+<div class="container">
+    <h2>Home</h2>
+    <div class="menu">
+        <div class="menu-item">
+            <a href="gmage/index.html"><img src="resources/logos/mysite.games.png" alt="MySite Games"></a>
+            <p>MySite.games</p>
+        </div>
+        <div class="menu-item">
+            <a href="launcher/index.html?v=6"><img src="resources/logos/eagler.png" alt="Eagler"></a>
+            <p>MinecraftXLauncher</p>
+        </div>
+        <div class="menu-item">
+            <a href="smashkarts/index.html"><img src="resources/logos/smashkart.png" alt="Smash Karts Remade"></a>
+            <p>Smash Karts Remade</p>
+        </div>
+        <div class="menu-item">
+            <a href="cookieclicker/index.html"><img src="resources/logos/cookieclicker.png" alt="Cookie Clicker"></a>
+            <p>Cookie Clicker</p>
+        </div>
+        <div class="menu-item">
+            <a href="improveTools/index.html"><img src="resources/logos/improvetools.png" alt="Improvement Tools"></a>
+            <p>Improvement Tools</p>
+        </div>
+        <div class="menu-item">
+            <a href="slope/index.html"><img src="resources/logos/slope.jpg" alt="Slope"></a>
+            <p>Slope</p>
+        </div>
+    </div>
+
+    <h2 style="text-align: center; margin-top: 40px;">Emulation and Old Games</h2>
+    <div class="menu">
+        <div class="menu-item">
+            <a href="EmulationStation/index.html"><img src="resources/logos/emulationstation.png" alt="EmulationStation"></a>
+            <p>EmulationStation</p>
+        </div>
+        <div class="menu-item">
+            <a href="mariokart65/index.html"><img src="resources/logos/mariokart64.png" alt="Mario Kart 64"></a>
+            <p>Mario Kart 64</p>
+        </div>
+        <div class="menu-item">
+            <a href="kirby/index.html"><img src="resources/logos/kirby.png" alt="Kirby Nightmare in Dream Land GBA"></a>
+            <p>Kirby Nightmare in Dream Land GBA</p>
+        </div>
+        <div class="menu-item">
+            <a href="zelda/index.html"><img src="resources/logos/zelda.png" alt="Zelda GBA"></a>
+            <p>Zelda GBA</p>
+        </div>
+         <div class="menu-item">
+            <a href="sonic/index.html"><img src="resources/logos/sonic.png" alt="Zelda GBA"></a>
+            <p>Sonic GBA</p>
+        </div>
+         <div class="menu-item">
+            <a href="emumu/index.html"><img src="resources/logos/webretro.png" alt="Zelda GBA"></a>
+            <p>RetroArch Web</p>
+        </div>
+        
+    </div>
+        <h2 style="text-align: center; margin-top: 40px;">Site Stuff</h2>
+  <div class="menu">
+        <div class="menu-item">
+            <a href="changelog.html"><img src="resources/logos/changelog.png" alt="EmulationStation"></a>
+            <p>Changelog</p>
+        </div>
+    
+          
+     <div class="menu-item">
+            <a href="https://github.com/SpeedSlicer/MineXLauncher/"><img src="resources/logos/github.png" alt="EmulationStation"></a>
+            <p>MineXLauncher Github</p>
+        </div>
+           <div class="menu-item">
+            <a href="index.html"><img src="resources/logos/back.png" alt="EmulationStation"></a>
+            <p>Back to Regular</p>
+        </div>
+</div>
+</div>
+<script>
+    function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function toggleSettingsPanel() {
+        const panel = document.getElementById('settingsPanel');
+        panel.classList.toggle('visible');
+    }
+
+    function toggleChangelogPanel() {
+        const panel = document.getElementById('changelogPanel');
+        panel.classList.toggle('visible');
+    }
+</script>
+</body>
+</html>

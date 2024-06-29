@@ -1,0 +1,109 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 49%;
+    width: 138px;
+    height: 138px;
+    bottom: -138px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 22%;
+    width: 124px;
+    height: 124px;
+    bottom: -124px;
+    animation-delay: 3s;
+}
+.background li:nth-child(2) {
+    left: 88%;
+    width: 145px;
+    height: 145px;
+    bottom: -145px;
+    animation-delay: 9s;
+}
+.background li:nth-child(3) {
+    left: 80%;
+    width: 192px;
+    height: 192px;
+    bottom: -192px;
+    animation-delay: 2s;
+}
+.background li:nth-child(4) {
+    left: 64%;
+    width: 177px;
+    height: 177px;
+    bottom: -177px;
+    animation-delay: 2s;
+}
+.background li:nth-child(5) {
+    left: 68%;
+    width: 170px;
+    height: 170px;
+    bottom: -170px;
+    animation-delay: 8s;
+}
+.background li:nth-child(6) {
+    left: 25%;
+    width: 148px;
+    height: 148px;
+    bottom: -148px;
+    animation-delay: 9s;
+}
+.background li:nth-child(7) {
+    left: 23%;
+    width: 186px;
+    height: 186px;
+    bottom: -186px;
+    animation-delay: 18s;
+}
+.background li:nth-child(8) {
+    left: 10%;
+    width: 154px;
+    height: 154px;
+    bottom: -154px;
+    animation-delay: 20s;
+}
+.background li:nth-child(9) {
+    left: 69%;
+    width: 109px;
+    height: 109px;
+    bottom: -109px;
+    animation-delay: 26s;
+}
+ 
+

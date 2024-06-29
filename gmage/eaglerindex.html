@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9823696750391920"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #212121; /* Dark grey background */
+      color: #ffffff; /* White text */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #333333; /* Darker grey background */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Slight glow */
+      text-align: center;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 20px;
+      font-size: 24px;
+      text-align: left;
+      color: #ffffff; /* White text */
+      background-color: #512da8; /* Purple button */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #311b92; /* Darker purple on hover */
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .btn i {
+      margin-right: 10px; /* Add space between icon and text */
+    }
+
+    .home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #512da8; /* Purple home button */
+      color: #ffffff; /* White text */
+      padding: 10px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .home-button i {
+      font-size: 20px;
+    }
+
+    .home-button:hover {
+      background-color: #311b92; /* Darker purple on hover */
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="../index.html" class="home-button"><i class="fas fa-home"></i></a>
+
+  <div class="container">
+    <h1 style="color: #ffffff;">Eaglercraft</h1> <!-- White title text -->
+
+    <button class="btn" id="selectClientBtn" onclick="window.open('mcclients/clientload.html');window.close()"><i class="fas fa-rocket"></i>Select Eaglercraft Clients</button>
+    <button class="btn" onclick="window.open('packs.html');window.close()"><i class="fas fa-download"></i>Texture Pack Downloads</button>
+    <button class="btn" onclick="window.open('serverlist.html');window.close()"><i class="fas fa-server"></i>Server List</button>
+    <button class="btn" onclick="window.open('https://discord.gg/wVMGdSDzxC')"><i class="fab fa-discord"></i>Eaglerforge Discord</button>
+    <button class="btn" onclick="window.open('https://eaglerforge.github.io/')"><i class="fas fa-link"></i>Eaglerforge API</button>
+
+  </div>
+
+</body>
+
+</html>

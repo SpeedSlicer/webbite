@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webbite : Home</title>
+<link rel="stylesheet" href="style.css?v=9">
+<style>
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<div class="clock" id="clock"></div>
+<div class="container">
+    <h1>Welcome to Webbite</h1>
+    
+
+<h3>Cloaked Tabs (Turn off when in Classroom Session notification) :</h3><label class="switch">
+  <input type="checkbox" name="checkAddress" onclick="checkAddress(this)" checked >
+  <span class="slider round"></span>
+</label>
+   
+    <h2 style="text-align: center; margin-top: 40px;">By SpeedSlicerX</h2>
+
+    <div class="menu">
+        <div class="menu-item">
+            <a href="https://eclipse-launcher.vercel.app/"><img src="resources/logos/eclipse.gif" alt="MySite Games"></a>
+            <p>Eclipse Launcher</p>
+        </div>
+        <div class="menu-item">
+            <a href="gmage/index.html"><img src="resources/logos/mysite.games.png" alt="MySite Games"></a>
+            <p>MySite.games (OLD)</p>
+        </div>
+       
+         
+    </div>
+     <h2 style="text-align: center; margin-top: 40px;">Misc Games</h2>
+<div class="menu">
+     <div class="menu-item">
+            <a onClick="openAboutBlank('https://stumbleguys.com/play/#monkey-challenge')"><img src="resources/logos/stumbleguys.png" alt="Eagler"></a>
+            <p>Stumble Guys</p>
+        </div>
+        <div class="menu-item">
+            <a onClick="openAboutBlank('https://smashkarts.io/#monkey-challenge')"><img src="resources/logos/smashkart.png" alt="Smash Karts Remade"></a>
+            <p>Smash Karts</p>
+        </div>
+        
+        <div class="menu-item">
+            <a href="cookieclicker/index.html"><img src="resources/logos/cookieclicker.png" alt="Cookie Clicker"></a>
+            <p>Cookie Clicker</p>
+        </div>
+        
+        <div class="menu-item">
+            <a href="slope/index.html"><img src="resources/logos/slope.jpg" alt="Slope"></a>
+            <p>Slope</p>
+        </div>
+         <div class="menu-item">
+            <a onClick="openAboutBlank('https://littlealchemy2.com/#mo-ohio-nkey-challenge')"><img src="https://littlealchemy2.com/static/img/logo.svg" alt="Smash Karts Remade"></a>
+            <p>Little Alchemy 2</p>
+        </div>
+</div>
+    <h2 style="text-align: center; margin-top: 40px;">FPS</h2>
+
+  <div class="menu">
+      <div class="menu-item">
+            <a onClick="openAboutBlank('https://venge.io/#monkey-challenge')"><img src="https://cdn-1.webcatalog.io/catalog/venge-io/venge-io-icon-filled-256.webp?v=1714776341422/#monkey-challenge" alt="Smash Karts Remade"></a>
+            <p>Venge</p>
+        </div>
+         <div class="menu-item">
+            <a onClick="openAboutBlank('https://deadshot.io/#monkey-challenge')"><img src="resources/logos/deadshot.png" alt="Smash Karts Remade"></a>
+            <p>Deadshot</p>
+        </div>
+         <div class="menu-item">
+            <a onClick="openAboutBlank('https://krunker.io/#aogaoeeg-challenge')"><img src="https://ih1.redbubble.net/image.1911362625.2145/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Smash Karts Remade"></a>
+            <p>Krunker</p>
+        </div>
+          <div class="menu-item">
+            <a onClick="openAboutBlank('https://shellshock.io/#monkey-challenge')"><img src="https://pbs.twimg.com/profile_images/1456048577839435781/GiJJhpA3_400x400.jpg" alt="Smash Karts Remade"></a>
+            <p>Shell Shockers</p>
+        </div>
+          <div class="menu-item">
+            <a onClick="openAboutBlank('https://ev.io/#monkey-challenge')"><img src="https://storage.googleapis.com/fractal-media/media_3083d484-8ab6-4afb-9662-eb8f48cc8c02" alt="Smash Karts Remade"></a>
+            <p>ev.io</p>
+        </div>
+      </div>
+    <h2 style="text-align: center; margin-top: 40px;">Emulation and Old Games</h2>
+    <div class="menu">
+        <div class="menu-item">
+            <a href="EmulationStation/index.html"><img src="resources/logos/emulationstation.png" alt="EmulationStation"></a>
+            <p>EmulationStation</p>
+        </div>
+        <div class="menu-item">
+            <a href="mariokart65/index.html"><img src="resources/logos/mariokart64.png" alt="Mario Kart 64"></a>
+            <p>Mario Kart 64</p>
+        </div>
+        <div class="menu-item">
+            <a href="kirby/index.html"><img src="resources/logos/kirby.png" alt="Kirby Nightmare in Dream Land GBA"></a>
+            <p>Kirby Nightmare in Dream Land GBA</p>
+        </div>
+        <div class="menu-item">
+            <a href="zelda/index.html"><img src="resources/logos/zelda.png" alt="Zelda GBA"></a>
+            <p>Zelda GBA</p>
+        </div>
+         <div class="menu-item">
+            <a href="sonic/index.html"><img src="resources/logos/sonic.png" alt="Zelda GBA"></a>
+            <p>Sonic GBA</p>
+        </div>
+         <div class="menu-item">
+            <a href="emumu/index.html"><img src="resources/logos/webretro.png" alt="Zelda GBA"></a>
+            <p>RetroArch Web</p>
+        </div>
+        
+    </div>
+            <h2 style="text-align: center; margin-top: 40px;">Suggest Games</h2>
+ <div class="menu">
+        <div class="menu-item">
+            <a onClick="openAboutBlank('https://html5.gamedistribution.com/#monkey-challenge')"><img src="resources/logos/archive.png" alt="Smash Karts Remade"></a>
+            <p>Game Archive</p>
+        </div>
+</div>
+        <h2 style="text-align: center; margin-top: 40px;">Misc</h2>
+  <div class="menu">
+        <div class="menu-item">
+            <a href="improveTools/index.html"><img src="resources/logos/improvetools.png" alt="Improvement Tools"></a>
+            <p>Improvement Tools</p>
+        </div>
+        <div class="menu-item">
+            <a href="changelog.html"><img src="resources/logos/changelog.png" alt="EmulationStation"></a>
+            <p>Changelog</p>
+        </div>
+        <div class="menu-item">
+            <a href="https://github.com/SpeedSlicer/websitedesigntsa-source/"><img src="resources/logos/github.png" alt="EmulationStation"></a>
+            <p>Page Github</p>
+        </div>
+             <div class="menu-item">
+            <a href="https://github.com/SpeedSlicer/Eclipse-Launcher/"><img src="resources/logos/github.png" alt="EmulationStation"></a>
+            <p>Eclipse Launcher Github</p>
+        </div>
+     <div class="menu-item">
+            <a href="https://github.com/SpeedSlicer/MineXLauncher=Old/"><img src="resources/logos/github.png" alt="EmulationStation"></a>
+            <p>MineXLauncher-Old Github</p>
+        </div>
+          <div class="menu-item">
+            <a href="oldindex.html"><img src="resources/logos/oldsite.png" alt="EmulationStation"></a>
+            <p>Old Site (DEPRECATED)</p>
+        </div>
+                <div class="menu-item">
+            <a href="launcher/index.html?v=6"><img src="resources/logos/eagler.png" alt="Eagler"></a>
+            <p>MineXLauncher (DEPRECATED)</p>
+        </div>
+</div>
+</div>
+<script>
+   let aboutblank = true;
+
+function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+function toggleSettingsPanel() {
+    const panel = document.getElementById('settingsPanel');
+    panel.classList.toggle('visible');
+}
+
+function toggleChangelogPanel() {
+    const panel = document.getElementById('changelogPanel');
+    panel.classList.toggle('visible');
+}
+
+function openAboutBlank(urlString) {
+    if (aboutblank) {
+        var win = window.open('about:blank');
+        win.document.body.style.margin = '0';
+        win.document.body.style.height = '100vh';
+        var iframe = win.document.createElement('iframe');
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.src = urlString;
+        win.document.body.appendChild(iframe);
+    } else {
+        window.location.href = urlString;
+    }
+}
+function checkAddress(checkbox) {
+    aboutblank = checkbox.checked;
+}
+</script>
+
+</body>
+</html>

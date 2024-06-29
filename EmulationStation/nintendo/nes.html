@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NES</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    #game-container {
+        text-align: center;
+        width: 100%;
+    }
+    #game {
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        width: 100%;
+        height: calc(100vh - 200px); /* Adjust height as needed */
+    }
+    #gameFile {
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="game"></div>
+    <div>
+        <label for="gameFile">Upload .nes File:</label>
+        <input type="file" id="gameFile">
+        <button onclick="loadGame()">Load Game</button>
+    </div>
+</div>
+
+<script>
+    let gameFileInput = document.getElementById('gameFile');
+
+    function loadGame() {
+        let file = gameFileInput.files[0];
+        if (!file) {
+            alert('Please select a .nes file.');
+            return;
+        }
+
+        let reader = new FileReader();
+        reader.onload = function(event) {
+            let gameData = event.target.result;
+            loadEmulator(gameData);
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function loadEmulator(gameData) {
+        let gameContainer = document.getElementById('game');
+        gameContainer.innerHTML = ''; // Clear any previous game content
+
+        EJS_player = "#game";
+        EJS_core = "snes";
+        EJS_gameName = "snes";
+        EJS_startOnLoaded = true; // Start the game immediately after loading
+        EJS_pathtodata = "https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/";
+        EJS_gameUrl = gameData;
+
+        let script = document.createElement('script');
+        script.src = "https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/loader.js";
+        document.body.appendChild(script);
+        
+        // Automatically scroll to the game container after loading
+        gameContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
